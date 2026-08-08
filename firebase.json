@@ -1,0 +1,41 @@
+{
+  "hosting": {
+    "site": "peek-a-boo-504920",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      ".git/**",
+      "firebase-debug.log",
+      "Dockerfile",
+      "README.md",
+      "server.js",
+      "tmp/**",
+      "assets/*-source.png",
+      "assets/peek-cat-3d.png",
+      "assets/peek-cat-top-3d.png",
+      "assets/peek-cat-bottom-3d.png"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(png|mp3)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html|css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ]
+  }
+}

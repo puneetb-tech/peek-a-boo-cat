@@ -1,5 +1,7 @@
 .DS_Store
 tmp/
+firebase-debug.log
+.firebase/
 
 # Image-generation intermediates; the app uses the tightly cropped sprites.
 assets/*-source.png

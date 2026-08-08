@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#76cdeb" />
+    <meta name="description" content="A gentle peek-a-boo cat game for little ones." />
+    <title>Peek-a-Boo Kitty!</title>
+    <link rel="preload" as="image" href="assets/peek-cat-side-tight.png" />
+    <link rel="preload" as="image" href="assets/peek-cat-top-tight.png" />
+    <link rel="preload" as="image" href="assets/peek-cat-bottom-tight.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game" id="game">
+      <div class="sky" aria-hidden="true">
+        <div class="sun"><i></i></div>
+        <div class="cloud cloud-a"><i></i><b></b></div>
+        <div class="cloud cloud-b"><i></i><b></b></div>
+        <div class="cloud cloud-c"><i></i><b></b></div>
+        <div class="balloon balloon-pink"><i></i></div>
+        <div class="balloon balloon-yellow"><i></i></div>
+        <div class="butterfly butterfly-one">🦋</div>
+        <div class="butterfly butterfly-two">🦋</div>
+        <div class="bird bird-one">⌁</div><div class="bird bird-two">⌁</div>
+        <div class="bubble bubble-a"></div><div class="bubble bubble-b"></div><div class="bubble bubble-c"></div>
+      </div>
+
+      <header class="hud" aria-label="Game controls">
+        <div class="logo" aria-label="Peek-a-Boo Kitty"><span>✦</span> Peek-a-Boo <b>Kitty!</b></div>
+        <div class="hud-actions">
+          <div class="star-badge" aria-live="polite" aria-label="Happy stars"><span>★</span><b id="stars">0</b></div>
+          <button class="sound-toggle" id="soundToggle" type="button" aria-label="Turn sounds off" aria-pressed="false"><span aria-hidden="true">🔊</span></button>
+        </div>
+      </header>
+
+      <section class="playfield" id="playfield" aria-label="Find and tap the kitty">
+        <div class="hills hill-far" aria-hidden="true"></div>
+        <div class="hills hill-near" aria-hidden="true"></div>
+        <div class="tree tree-left" aria-hidden="true"><i></i><b></b><em></em></div>
+        <div class="tree tree-right" aria-hidden="true"><i></i><b></b><em></em></div>
+        <div class="flower-bed left-flowers" aria-hidden="true"><i>✿</i><i>✿</i><i>✿</i><i>✿</i></div>
+        <div class="flower-bed right-flowers" aria-hidden="true"><i>✿</i><i>✿</i><i>✿</i><i>✿</i></div>
+        <div class="grass" aria-hidden="true"></div>
+        <div class="sparkle-field" id="sparkleField" aria-hidden="true"></div>
+
+        <button class="cat hide" id="cat" type="button" aria-label="Tap the kitty!">
+          <img class="cat-visual" src="assets/peek-cat-side-tight.png" alt="A happy kitten peeking from the side" />
+        </button>
+        <div class="speech-bubble" id="speechBubble" aria-live="polite"></div>
+      </section>
+
+      <section class="start-screen" id="startScreen">
+        <div class="start-card">
+          <div class="little-cat" aria-hidden="true">🐱</div>
+          <p>Can you find the kitty?</p>
+          <h1>Let’s play<br /><span>Peek-a-Boo!</span></h1>
+          <button class="play-button" id="playButton" type="button"><span>▶</span> Play!</button>
+          <small>Tap the kitty when it peeks out!</small>
+        </div>
+      </section>
+
+      <div class="celebration" id="celebration" aria-hidden="true"></div>
+      <p class="gentle-hint" id="gentleHint">The kitty is coming soon…</p>
+    </main>
+    <audio id="catMeow" src="assets/cat-meow.mp3" preload="auto"></audio>
+    <script src="app.js"></script>
+  </body>
+</html>

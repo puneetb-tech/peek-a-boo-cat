@@ -1,0 +1,8 @@
+.DS_Store
+tmp/
+
+# Image-generation intermediates; the app uses the tightly cropped sprites.
+assets/*-source.png
+assets/peek-cat-3d.png
+assets/peek-cat-top-3d.png
+assets/peek-cat-bottom-3d.png

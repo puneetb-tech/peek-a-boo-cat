@@ -4,7 +4,7 @@ A standalone, no-dependency toddler game. Open `index.html` in a modern browser,
 
 Play online:
 
-- Google Cloud Run: https://peek-a-boo-cat-dsgzy7kgva-el.a.run.app/
+- Google Cloud Run: https://peek-a-boo-dsgzy7kgva-el.a.run.app/
 - GitHub Pages: https://puneetb-tech.github.io/peek-a-boo-cat/
 
 It uses the browser's gentle speech voice when available, a real cat meow, and a quiet synthesized chime. The sound button turns all audio off.

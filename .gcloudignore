@@ -1,0 +1,9 @@
+.gcloudignore
+.git
+.git/**
+.DS_Store
+tmp/
+assets/*-source.png
+assets/peek-cat-3d.png
+assets/peek-cat-top-3d.png
+assets/peek-cat-bottom-3d.png
